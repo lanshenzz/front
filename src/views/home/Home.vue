@@ -1,34 +1,18 @@
 <template>
     <div class="home">
-      <top-nav-bar class="home-top-bar">
-            <div slot="center" >
-              <div class="left-2">
-                <span  style="cursor:pointer;">ScholatData</span>
-              </div>
-              <div class="center-2">
-                  <i v-for="(item,index) in title" class="center-title"
-                     :class="{active:index === currentIndex}"
-                     @click="itemClick(index)"><span >{{item}}</span></i>
-              </div>
-              <div class="right-2">
-                <span style="cursor:pointer;">Login</span>
-              </div>
-            </div>
-          </top-nav-bar>
       <div class="home-content">
         <swiper ></swiper>
         <div class="home-news">
-          <news style="display:inline-block"></news>
-          <news style="display:inline-block;padding-left: 10px"></news>
+          <news style="display:inline-block" :news_title="news_titles[0].idView"></news>
+          <news  style="display:inline-block;padding-left: 10px" :news_title="news_titles[1].idView" :title_id="news_titles[1].id"></news>
         </div>
         <div class="home-news">
-          <news style="display:inline-block"></news>
-          <news style="display:inline-block;padding-left: 10px"></news>
+          <news  style="display:inline-block" :news_title="news_titles[2].idView" :title_id="news_titles[2].id"></news>
+          <news style="display:inline-block;padding-left: 10px" :news_title="news_titles[3].idView" ></news>
         </div>
-
       </div>
       <div style="margin-top: 30px">
-        <bottom-nav-bar ></bottom-nav-bar>
+
       </div>
 
     </div>
@@ -38,25 +22,43 @@
   import TopNavBar from '@/components/common/topNavBar/TopNavBar'
   import Swiper from '@/components/common/swiper/Swiper'
   import News from '@/components/content/news/News'
-  import BottomNavBar from '@/components/common/bottomNavBar/BottomNavBar'
+
     export default {
       name: "Home",
       data() {
         return {
-          title: ['MainPage', 'ScholatKG', 'ScholatCourse'],
           currentIndex: 0,
+          news_titles:[{id:0,idView:'Welcome to ScholatData'},{id:1,idView:'About ScholatData'},
+            {id:2,idView:'Relate Papers'},{id:3,idView:'Current highlights'}],
+          news_titles_E:[{id:0,idView:'Welcome to ScholatData'},{id:1,idView:'About ScholatData'},
+            {id:2,idView:'Relate Papers'},{id:3,idView:'Current highlights'}],
+          news_titles_C:[{id:0,idView:'学者网数据集'},{id:1,idView:'学者网简介'},
+            {id:2,idView:'相关论文'},{id:3,idView:'近期动态'}],
+          isEngOrCh:true
         }
       },
       components: {
         TopNavBar,
         Swiper,
         News,
-        BottomNavBar
       },
       methods: {
-        itemClick(index) {
-          this.currentIndex = index;
-          // this.$emit('tabClick', index)
+
+      },
+      computed:{
+        isChangeEngOrCh () {
+          return this.$store.state.isEngOrCh;　　
+        }
+      },
+      watch:{
+        isChangeEngOrCh(newVal,oldVal){
+          this.isEngOrCh=newVal;
+          if(this.isEngOrCh===true){
+            this.news_titles=this.news_titles_C;
+          }
+          if(this.isEngOrCh===false){
+            this.news_titles=this.news_titles_E;
+          }
         }
       }
     }
@@ -64,40 +66,7 @@
 
 <style scoped>
   .home{
-    width: 100%;
-    height: 100%;
-  }
 
-  .home-top-bar{
-    font-weight: 600;
-    color: #fff;
-    background-color: #ff8822;
-  }
-  .center-title{
-    cursor:pointer;
-    padding-right: 20px;
-  }
-  .active{
-    color: #ff5e21;
-  }
-  .active  span{
-    border-bottom: 3px solid #ff5e21;
-  }
-  .left-2{
-    text-align: left;
-    width: 180px;
-    float: left;
-    font-size: 24px;
-  }
-  .center-2{
-    text-align: left;
-    width: 664px;
-    float: left;
-  }
-  .right-2{
-    text-align: right;
-    width: 180px;
-    float: left;
   }
   .home-content{
     padding-top: 90px;
@@ -107,4 +76,5 @@
   .home-news{
     padding-top: 20px;
   }
+
 </style>
