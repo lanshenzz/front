@@ -7,7 +7,9 @@ import axios from 'axios'
 import ElementUI from 'element-ui';
 import store from './store'
 import 'element-ui/lib/theme-chalk/index.css';
+import myCharts from './utils/echarts/myCharts.js'
 
+Vue.use(myCharts)
 Vue.use(ElementUI);
 axios.defaults.baseURL = '/api'
 Vue.prototype.$axios = axios

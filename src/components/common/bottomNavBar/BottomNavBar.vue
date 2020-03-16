@@ -25,7 +25,6 @@
     margin-bottom: 0;
     z-index: 9;
     text-align: center;
-
   }
   .BottomNavBar i{
 

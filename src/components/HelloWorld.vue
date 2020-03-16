@@ -19,18 +19,18 @@ export default {
       userInfo:null
     }
   },
-  created(){
-    this.getUser()
-  },
-  methods: {
-
-    getUser(){
-      this.$axios.get('/user/getAll').then(res=>{
-        // console.log(res.data);
-        this.userInfo=res.data
-      })
-    },
-  }
+  // created(){
+  //   this.getUser()
+  // },
+  // methods: {
+  //
+  //   getUser(){
+  //     this.$axios.get('/user/getAll').then(res=>{
+  //       // console.log(res.data);
+  //       this.userInfo=res.data
+  //     })
+  //   },
+  // }
 }
 </script>
 
