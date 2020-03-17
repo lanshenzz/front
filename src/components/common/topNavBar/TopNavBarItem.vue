@@ -35,8 +35,10 @@
   cursor:pointer;
   padding-right: 20px;
 }
-  .active span{
-    color: #ff5e21;
-    border-bottom: 3px solid #ff5e21;
-  }
+.active span{
+  color: #ff5e21;
+  border-bottom: 3px solid #ff5e21;
+  padding-bottom: 5px;
+
+}
 </style>
