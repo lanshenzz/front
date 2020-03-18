@@ -25,7 +25,7 @@
     width: 100%;
     height: 60px;
     box-shadow: 0 2px 2px rgba(100, 100, 100, 0.4);
-    font-family: "Times New Roman.Regular";
+    font-family: Times New Roman,Regular;
     z-index: 9;
   }
 

@@ -10,6 +10,7 @@
           <news  style="display:inline-block" :news_title="news_titles[2].idView" :title_id="news_titles[2].id"></news>
           <news style="display:inline-block;padding-left: 10px" :news_title="news_titles[3].idView" ></news>
         </div>
+
       </div>
       <div style="margin-top: 30px">
 
@@ -22,6 +23,7 @@
   import TopNavBar from '@/components/common/topNavBar/TopNavBar'
   import Swiper from '@/components/common/swiper/Swiper'
   import News from '@/components/content/news/News'
+
 
     export default {
       name: "Home",
@@ -74,7 +76,7 @@
     margin: 0 auto
   }
   .home-news{
-    padding-top: 20px;
+
   }
 
 </style>

@@ -25,7 +25,7 @@
     margin-bottom: 0;
     z-index: 9;
     text-align: center;
-    box-shadow: 0 2px 2px rgba(100, 100, 100, 0.4);
+    box-shadow: 0 -2px 2px rgba(100, 100, 100, 0.4);
   }
   .BottomNavBar i{
 

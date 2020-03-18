@@ -34,11 +34,12 @@
   display: inline-block;
   cursor:pointer;
   padding-right: 20px;
+  line-height: 60px;
 }
-.active span{
-  color: #ff5e21;
-  border-bottom: 3px solid #ff5e21;
-  padding-bottom: 5px;
+  .active span{
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 5px;
 
-}
+  }
 </style>

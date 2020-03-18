@@ -2,7 +2,7 @@
     <div class="swiper">
       <el-carousel indicator-position="outside" :interval="5000">
         <el-carousel-item v-for="item in imagesBox" :key="item.id">
-          <img :src="item.idView" >
+          <img v-lazy="item.idView" >
         </el-carousel-item>
       </el-carousel>
     </div>
