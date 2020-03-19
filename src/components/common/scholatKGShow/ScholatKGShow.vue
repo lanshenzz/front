@@ -1,6 +1,6 @@
 <template>
     <div class="ScholatKGShow">
-      <div v-for="(item,index) in cardShowURL" :key="index" style=" flex: 1;">
+      <div v-for="(item,index) in cardShowURL" :key="index" style=" float: left;margin-right: 20px">
         <img :src="item" alt="">
       </div>
 
@@ -22,7 +22,7 @@
 <style scoped>
   .ScholatKGShow{
     display:flex;
-
+    width: 960px;
   }
   .img{
 

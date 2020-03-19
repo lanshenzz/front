@@ -14,15 +14,33 @@
 
 
       <div class="news-content">
+        <div class="news-titles">
+          <div v-for="(item,key) in 2" :key="key"  class="news-title" style="clean:both; width:449px; height:54px;">
+            <div style="display:inline-block; float:left; width:36px; height:36px; font-size:0;">
+                <span style="color:#990000; font-size:24px; font-family:'微软雅黑'; font-weight:bold;">29</span>
+                <span style="color:#858181; font-size:8px; font-family:'微软雅黑'; font-weight:regular;">2020.02</span>
+            </div>
+            <div style="height:36px; float:right; display:inline; width:408px;">
+              <span style="color:#222222; size:16px; font-family:'Times New Roman'">
+              Knowledge Graph Scholatdata about SCNU hahaha based on social latdata about SCNU hahaha based on social
+              </span>
+            </div>
+            <hr style="width:430px; high:1px; color:#d6d6d6; position:relative; top:10px">
+          </div>
+        </div>
         <div v-for="(item,key) in 5" :key="key" v-bind:class="{'top-news':key==0||key==1}">
+          <!-- <hr v-if="key==0" weigh=430px high=1px color=#d6d6d6> -->
           <div class="news-item">
             <div class="paper-num">{{"paper"+(++key)}}</div>
             <div class="paper-title">
-              <a href="">{{"Konwledge Graph XX xxxxxx"+(++key)}}</a>
+              <a style="text-decoration:none; color:#3d3d3d; size:16px; font-family:'Times New Roman';"  href="">
+              {{"Konwledge Graph XX xxxxxx"+(++key)}}</a>
             </div>
-            <span>08-17</span>
-          </div>
+            <span style="color:#858181; size:12px; font-family:Georgia;">08-17</span>
+            <!-- <hr v-if="key==6" weigh=430px high=1px color=#d6d6d6> -->
+          </div>  
         </div>
+        
       </div>
     </div>
   </div>

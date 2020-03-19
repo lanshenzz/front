@@ -15,7 +15,6 @@
   .card{
     flex: 1;
     width: 470px;
-    margin-right: 20px;
     height: 260px;
     font-family: Times New Roman,bold;
   }

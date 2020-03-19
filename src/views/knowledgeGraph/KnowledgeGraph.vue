@@ -1,7 +1,7 @@
 <template>
     <div class="KnowledgeGraph">
       <div class="KGCard">
-        <card >
+        <card style="margin-right: 20px;">
         <div slot="card-title" class="card-title">{{cardTitle[0]}}</div>
         <div slot="card-content" style="margin-top: 20px;">
           <CardContentItem v-for="i in 6" :key="i">
@@ -12,10 +12,11 @@
        <card >
         <div slot="card-title" class="card-title">{{cardTitle[1]}}<img src="@/assets/img/omit.svg" alt="" style="float: right;width: 40px"></div>
         <div slot="card-content" style="margin-top: 20px;">
-          <CardContentItem v-for="i in 6" :key="i" style= "border-bottom: 1px solid #d6d6d6;">
+          <CardContentItem v-for="i in 6" :key="i">
             <div slot="left">{{contentDate}}</div>
             <div slot="center" style="float: right">{{contentDetail}}</div>
             <div slot="right" style="float: right;cursor:pointer;"><span>download</span></div>
+            <div slot="underLine" style="border-bottom: 1px solid #d6d6d6;width: 460px;margin:auto"></div>
           </CardContentItem>
         </div>
         </card>
