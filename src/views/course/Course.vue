@@ -1,15 +1,15 @@
 <template>
     <div class="course">
-
+      <CirChart></CirChart>
     </div>
 </template>
 
 <script>
-
+    import CirChart from '@/components/content/charts/CirChart'
     export default {
         name: "Course",
       components:{
-
+        CirChart
       },
       data(){
         return{

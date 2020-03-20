@@ -9,6 +9,7 @@ import store from './store'
 import 'element-ui/lib/theme-chalk/index.css';
 import echarts from 'echarts'
 import VueLazyload from 'vue-lazyload'
+import G6 from '@antv/g6';
 
 Vue.use(VueLazyload,{
   loading:require('@/assets/img/show1.jpg')
@@ -18,7 +19,7 @@ axios.defaults.baseURL = '/api';
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
 Vue.prototype.$echarts = echarts;
-
+Vue.prototype.$G6 = G6;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
