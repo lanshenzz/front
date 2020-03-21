@@ -469,8 +469,8 @@
             if(this.userTarget.length!==0)
             {
               for(let j=0;j<=this.userTarget.length-1;j++)
-              {this.CData.edges.push(new UserTarget(this.CData.nodes[j],this.userTarget[j]));
-               // console.log( this.CData.edges[j].source+'-> '+this.CData.edges[j].target);
+              {this.CData.edges.push(new UserTarget(SId,this.userTarget[j]));
+                console.log( SId+'-> '+this.CData.edges[j].target);
               }
             }
          //   console.log( this.CData.edges[0].source+' '+this.CData.edges[0].target);
@@ -526,15 +526,16 @@
               },
               'activate-relations',],
           },
+          animate: true,
           layout: {
             type: 'radial',
             unitRadius: 70,
             preventOverlap: true,
             strictRadial: false,
           },
-          animate: true,
+
           defaultNode: {
-            size: 40,
+            size: 30,
             style: {
               lineWidth: 4,
               fill: '#C6E5FF',

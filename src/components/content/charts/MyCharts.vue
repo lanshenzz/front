@@ -40,7 +40,7 @@
                 },
                 selectedMode: 'false',
                 bottom: 20,
-                data:this.courseData.categories,
+            //    data:this.courseData.categories,
               }],
               toolbox: {
                 show : true,

@@ -8,8 +8,8 @@ export class User {
 }
 
 export class UserTarget {
-  constructor(userInfo,userTarget){
-    this.source=userInfo.id+'';
+  constructor(id,userTarget){
+    this.source=id+'';
     this.target=userTarget.id+'';
 
 
