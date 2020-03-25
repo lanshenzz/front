@@ -437,10 +437,12 @@
             // ],
       },
       created(){
+        //记得改用Promise
         this.getUser();
         setTimeout(()=>{
           this.getSource();
         },2000)
+
       },
       watch:{
 
@@ -570,7 +572,7 @@
         setTimeout(()=>{
           graph.data(this.CData);
         graph.render();
-        },5000)
+        },3000)
 
       }
 
