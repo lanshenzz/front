@@ -2,15 +2,17 @@
     <div class="KnowledgeGraph">
       <div class="KGCard">
         <card style="margin-right: 20px;">
-        <div slot="card-title" class="card-title">{{cardTitle[0]}}</div>
+        <div slot="card-title" class="card-title" >{{cardTitle[0]}}</div>
         <div slot="card-content" style="margin-top: 20px;">
           <CardContentItem v-for="i in 6" :key="i">
-            <div slot="left" style="cursor:pointer;">{{cardContentData}}</div>
+            <div slot="left" style="cursor:pointer;width: 470px">{{cardContentData}}</div>
           </CardContentItem>
         </div>
         </card>
        <card >
-        <div slot="card-title" class="card-title">{{cardTitle[1]}}<img src="@/assets/img/omit.svg" alt="" style="float: right;width: 40px"></div>
+        <div slot="card-title" class="card-title">{{cardTitle[1]}}
+          <img src="@/assets/img/omit.svg" alt="" style="float: right;width: 40px;cursor:pointer;" @click="gotoDetails">
+        </div>
         <div slot="card-content" style="margin-top: 20px;">
           <CardContentItem v-for="i in 6" :key="i">
             <div slot="left">{{contentDate}}</div>
@@ -49,20 +51,52 @@
       data(){
         return{
           cardTitle:['Scholat Knowledge Graph(ScholatKG)','Dataset Download','Visualization of ScholatKG'],
-          cardContentData:'Konwledge Graph',
+          cardTitle_E:['Scholat Knowledge Graph(ScholatKG)','Dataset Download','Visualization of ScholatKG'],
+          cardTitle_C:['学者知识图谱','数据集下载','知识图谱可视化'],
+          cardContentData:'ScholatKonwledge Graph is a free and open knowledge base that can be read both humans and machines.',
           contentDate:'20200315.zip',
           contentDetail:'detail information',
           courseData:Cdata,
-
+          isEngOrCh:this.$store.state.isEngOrCh,
+        }
+      },
+      methods:{
+        gotoDetails(){
+          this.$router.push('details')
+        }
+      },
+      computed:{
+        isChangeEngOrCh () {
+          return this.$store.state.isEngOrCh;
+        }
+      },
+      created(){
+        if(this.isEngOrCh===true){
+          this.cardTitle=this.cardTitle_C;
+        }
+        if(this.isEngOrCh===false){
+          this.cardTitle=this.cardTitle_E;
         }
       },
       mounted() {
+
        // this.$chart.line1('Graph');
+      },
+      watch:{
+        isChangeEngOrCh(newVal,oldVal){
+          this.isEngOrCh=newVal;
+          if(this.isEngOrCh===true){
+            this.cardTitle=this.cardTitle_C;
+          }
+          if(this.isEngOrCh===false){
+            this.cardTitle=this.cardTitle_E;
+          }
+        }
       }
     }
 </script>
 
-<style scoped>
+<style scoped >
 .KnowledgeGraph{
 
   height: 100%;

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/views/home/Home'
 import KnowledgeGraph from '@/views/knowledgeGraph/KnowledgeGraph'
 import Course from '@/views/course/Course'
+import Details from "../views/details/Details";
 
 Vue.use(Router)
 
@@ -28,5 +29,10 @@ export default new Router({
       name: 'Course',
       component: Course
     },
+    {
+      path:'/details',
+      name:'Details',
+      component: Details
+    }
   ]
 })

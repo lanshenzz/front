@@ -38,7 +38,7 @@
 }
   .active span{
     color: #fff;
-    border-bottom: 3px solid #fff;
+    border-bottom: 2px solid #fff;
     padding-bottom: 5px;
 
   }

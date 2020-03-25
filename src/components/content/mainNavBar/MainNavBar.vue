@@ -58,7 +58,7 @@
 
 <style scoped>
   .home-top-bar{
-    font-weight: 600;
+
     color: #fff;
     background-color: #ff8822;
   }
@@ -80,7 +80,7 @@
     height: 60px;
   }
   .right-2-1{
-    width: 40px;display: inline-block;padding-top: 10px;
+    width: 27px;display: inline-block;padding-top: 10px;
   }
   .right-2-1 img{
     height: auto;

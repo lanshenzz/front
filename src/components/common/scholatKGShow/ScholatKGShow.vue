@@ -1,7 +1,7 @@
 <template>
     <div class="ScholatKGShow">
-      <div v-for="(item,index) in cardShowURL" :key="index" style=" float: left;margin-right: 20px">
-        <img :src="item" alt="">
+      <div v-for="(item,index) in cardShowURL" :key="index" style=" float: left;margin-right: 20px;opacity: 76%">
+        <img :src="item" alt="" >
       </div>
 
     </div>

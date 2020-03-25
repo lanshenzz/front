@@ -1,7 +1,11 @@
 <template>
     <div class="card">
-      <div class="heard"><slot name="card-title" ></slot></div>
-      <div><slot name="card-content"></slot></div>
+      <div class="heard">
+        <slot name="card-title" ></slot>
+      </div>
+      <div>
+        <slot name="card-content"></slot>
+      </div>
     </div>
 </template>
 

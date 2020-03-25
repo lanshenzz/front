@@ -1,7 +1,7 @@
 <template>
     <div class="BottomNavBar">
-      <div style="padding-top: 25px"><i >{{scholatUrl}}</i></div>
-      <div style="padding-top: 15px"><i style="font-size: 14px">{{severUrl}}</i></div>
+      <div style="padding-top: 25px">{{scholatUrl}}</div>
+      <div style="padding-top: 15px"><div style="font-size: 14px">{{severUrl}}</div></div>
     </div>
 </template>
 
@@ -27,7 +27,7 @@
     text-align: center;
     box-shadow: 0 -2px 2px rgba(100, 100, 100, 0.4);
   }
-  .BottomNavBar i{
+  .BottomNavBar div{
 
     color: #999;
     size: 16px;

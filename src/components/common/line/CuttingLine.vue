@@ -1,9 +1,9 @@
 <template>
   <div class="CuttingLine">
     <div class="line1"></div>
-    <div style=" float: left"><img src="@/assets/img/ScholatKG/RelationshipIcon.png" alt="" style="" ></div>
+    <div style=" float: left;"><img src="@/assets/img/ScholatKG/RelationshipIcon.png" alt="" style="height: 25px"></div>
     <div  class="line-title" style=" "><slot></slot></div>
-    <div  style=" float: right"><img src="@/assets/img/ScholatKG/RelationshipIcon2.png" alt=""></div>
+    <div  style=" float: right;"><img src="@/assets/img/ScholatKG/RelationshipIcon2.png" alt="" style="height: 25px"></div>
     <div class="line2"></div>
   </div>
 </template>

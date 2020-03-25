@@ -15,7 +15,7 @@
         courseData:null,
       },
       created(){
-        console.log(this.courseData);
+      //  console.log(this.courseData);
       },
       mounted(){
         this.drawLine();
@@ -27,20 +27,20 @@
        //  let myChart = this.$echarts.init(document.getElementById('myCharts'))
            let myChart=this.$echarts.init(this.$refs.myCharts);
           myChart.setOption({
-              title:{
-                text: "广州大学数据分析",
-                subtext: "各学院专业关系-Acring",
-                top: 20,
-                left: "center",
-              },
+              // title:{
+              //   text: "广州大学数据分析",
+              //   subtext: "各学院专业关系-Acring",
+              //   top: 20,
+              //   left: "center",
+              // },
               tooltip: {},
               legend: [{
-                tooltip: {
-                  show: true
-                },
+                // tooltip: {
+                //   show: true
+                // },
                 selectedMode: 'false',
                 bottom: 20,
-            //    data:this.courseData.categories,
+                data:this.courseData.categories,
               }],
               toolbox: {
                 show : true,
@@ -61,7 +61,7 @@
                 data:this.courseData.data,
                 links: this.courseData.links,
                 categories: this.courseData.categories,
-                focusNodeAdjacency: true,
+               // focusNodeAdjacency: true,
                 roam: true,
                 label: {
                   normal: {
